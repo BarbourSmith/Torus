@@ -6,11 +6,15 @@
     "uniqueID": 119802,
     "ioValues": [
         {
-            "name": "Diameter",
+            "name": "Radius",
             "ioValue": 10
         },
         {
             "name": "Height",
+            "ioValue": 10
+        },
+        {
+            "name": "Resolution",
             "ioValue": 10
         }
     ],
@@ -18,7 +22,7 @@
     "allAtoms": [
         {
             "atomType": "Input",
-            "name": "Diameter",
+            "name": "Radius",
             "x": 0.013333333333333334,
             "y": 0.367816091954023,
             "uniqueID": 183215,
@@ -38,9 +42,13 @@
                 {
                     "name": "Input2",
                     "ioValue": 10
+                },
+                {
+                    "name": "Sides",
+                    "ioValue": 10
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\n  return Torus(Input1, Input2)        //return must be geometry;\n}\n\nreturn main(Input1, Input2)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, Sides){\n  return Torus(Input1, Input2, {segments = Sides, sides = Sides})        //return must be geometry;\n}\n\nreturn main(Input1, Input2, Sides)"
         },
         {
             "atomType": "Input",
@@ -48,6 +56,14 @@
             "x": 0.013333333333333334,
             "y": 0.6436781609195402,
             "uniqueID": 774837,
+            "ioValues": []
+        },
+        {
+            "atomType": "Input",
+            "name": "Resolution",
+            "x": 0.013333333333333334,
+            "y": 0.8007662835249042,
+            "uniqueID": 328042,
             "ioValues": []
         },
         {
@@ -77,6 +93,13 @@
             "ap2Name": "Input2",
             "ap2Primary": false,
             "ap1ID": 774837,
+            "ap2ID": 997290
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Sides",
+            "ap2Primary": false,
+            "ap1ID": 328042,
             "ap2ID": 997290
         }
     ],
