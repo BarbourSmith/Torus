@@ -15,7 +15,7 @@
         },
         {
             "name": "Resolution",
-            "ioValue": 10
+            "ioValue": 55
         }
     ],
     "topLevel": true,
@@ -31,8 +31,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.3462664714494876,
-            "y": 0.4636015325670498,
+            "x": 0.3360175695461201,
+            "y": 0.39080459770114945,
             "uniqueID": 997290,
             "ioValues": [
                 {
@@ -44,11 +44,11 @@
                     "ioValue": 10
                 },
                 {
-                    "name": "Sides",
-                    "ioValue": 10
+                    "name": "resolution",
+                    "ioValue": 55
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, Sides){\n  return Torus(Input1, Input2, {segments = Sides, sides = Sides})        //return must be geometry;\n}\n\nreturn main(Input1, Input2, Sides)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, resolution){\n  return Torus(Input1, Input2, {sides: resolution/2, segments: resolution})        //return must be geometry;\n}\n\nreturn main(Input1, Input2, resolution)"
         },
         {
             "atomType": "Input",
@@ -62,7 +62,7 @@
             "atomType": "Input",
             "name": "Resolution",
             "x": 0.013333333333333334,
-            "y": 0.8007662835249042,
+            "y": 0.8697318007662835,
             "uniqueID": 328042,
             "ioValues": []
         },
@@ -97,7 +97,7 @@
         },
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "Sides",
+            "ap2Name": "resolution",
             "ap2Primary": false,
             "ap1ID": 328042,
             "ap2ID": 997290
