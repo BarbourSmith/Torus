@@ -4,9 +4,52 @@
     "x": 0,
     "y": 0,
     "uniqueID": 119802,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Diameter",
+            "ioValue": 10
+        },
+        {
+            "name": "Height",
+            "ioValue": 10
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
+        {
+            "atomType": "Input",
+            "name": "Diameter",
+            "x": 0.013333333333333334,
+            "y": 0.367816091954023,
+            "uniqueID": 183215,
+            "ioValues": []
+        },
+        {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.3462664714494876,
+            "y": 0.4636015325670498,
+            "uniqueID": 997290,
+            "ioValues": [
+                {
+                    "name": "Input1",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Input2",
+                    "ioValue": 10
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\n  return Torus(Input1, Input2)        //return must be geometry;\n}\n\nreturn main(Input1, Input2)"
+        },
+        {
+            "atomType": "Input",
+            "name": "Height",
+            "x": 0.013333333333333334,
+            "y": 0.6436781609195402,
+            "uniqueID": 774837,
+            "ioValues": []
+        },
         {
             "atomType": "Output",
             "name": "Output",
@@ -15,6 +58,29 @@
             "ioValues": []
         }
     ],
-    "allConnectors": [],
-    "fileTypeVersion": 1
+    "allConnectors": [
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input1",
+            "ap2Primary": false,
+            "ap1ID": 183215,
+            "ap2ID": 997290
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 997290
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input2",
+            "ap2Primary": false,
+            "ap1ID": 774837,
+            "ap2ID": 997290
+        }
+    ],
+    "fileTypeVersion": 1,
+    "filetypeVersion": 1,
+    "circleSegmentSize": 2
 }
