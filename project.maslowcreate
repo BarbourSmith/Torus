@@ -7,7 +7,7 @@
     "ioValues": [
         {
             "name": "Radius",
-            "ioValue": 30
+            "ioValue": 20
         },
         {
             "name": "Height",
@@ -37,7 +37,7 @@
             "ioValues": [
                 {
                     "name": "Input1",
-                    "ioValue": 30
+                    "ioValue": 20
                 },
                 {
                     "name": "Input2",
