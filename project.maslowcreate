@@ -11,7 +11,7 @@
         },
         {
             "name": "Height",
-            "ioValue": 20
+            "ioValue": 10
         },
         {
             "name": "Resolution",
@@ -41,7 +41,7 @@
                 },
                 {
                     "name": "Input2",
-                    "ioValue": 20
+                    "ioValue": 10
                 },
                 {
                     "name": "resolution",
