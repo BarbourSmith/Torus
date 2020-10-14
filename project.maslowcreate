@@ -48,7 +48,7 @@
                     "ioValue": 55
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, resolution){\n  return torus({ outerRadius: Input1, outerRadius: Input2 })\n}\n\nreturn main(Input1, Input2, resolution)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, resolution){\n  return torus({ outerRadius: Input1, innerRadius: Input2 })\n}\n\nreturn main(Input1, Input2, resolution)"
         },
         {
             "atomType": "Input",
