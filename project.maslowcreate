@@ -12,10 +12,6 @@
         {
             "name": "Height",
             "ioValue": 10
-        },
-        {
-            "name": "Resolution",
-            "ioValue": 55
         }
     ],
     "topLevel": true,
@@ -36,19 +32,15 @@
             "uniqueID": 997290,
             "ioValues": [
                 {
-                    "name": "Input1",
+                    "name": "majorDiameter",
                     "ioValue": 60
                 },
                 {
-                    "name": "Input2",
+                    "name": "minorDiameter",
                     "ioValue": 10
-                },
-                {
-                    "name": "resolution",
-                    "ioValue": 55
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, resolution){\n  return torus({ outerRadius: Input1, innerRadius: Input2 })\n}\n\nreturn main(Input1, Input2, resolution)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\n\nfunction main(majorDiameter, minorDiameter){\n  return Arc(majorDiameter).sweep(Arc(minorDiameter));        //return must be geometry;\n}\n\nreturn main(majorDiameter, minorDiameter)"
         },
         {
             "atomType": "Input",
@@ -59,25 +51,23 @@
             "ioValues": []
         },
         {
-            "atomType": "Input",
-            "name": "Resolution",
-            "x": 0.013333333333333334,
-            "y": 0.8697318007662835,
-            "uniqueID": 328042,
-            "ioValues": []
-        },
-        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
             "y": 0.5,
-            "ioValues": []
+            "uniqueID": 895268,
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "atoms/119802/997290Code"
+                }
+            ]
         }
     ],
     "allConnectors": [
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "Input1",
+            "ap2Name": "majorDiameter",
             "ap2Primary": false,
             "ap1ID": 183215,
             "ap2ID": 997290
@@ -86,20 +76,14 @@
             "ap1Name": "geometry",
             "ap2Name": "number or geometry",
             "ap2Primary": false,
-            "ap1ID": 997290
+            "ap1ID": 997290,
+            "ap2ID": 895268
         },
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "Input2",
+            "ap2Name": "minorDiameter",
             "ap2Primary": false,
             "ap1ID": 774837,
-            "ap2ID": 997290
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "resolution",
-            "ap2Primary": false,
-            "ap1ID": 328042,
             "ap2ID": 997290
         }
     ],
